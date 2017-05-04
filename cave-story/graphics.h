@@ -9,6 +9,7 @@ class Graphics {
 public: 
 	Graphics();
 	~Graphics();
+
 private: 
 	SDL_Window* _window; // where we draw to
 	SDL_Renderer* _renderer; // actually does the drawing
