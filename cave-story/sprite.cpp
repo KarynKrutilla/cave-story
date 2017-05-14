@@ -8,13 +8,13 @@ Sprite::Sprite(Graphics &graphics, const std::string &filePath, int sourceX, int
 	int width, int height, float posX, float posY) :
 	_x(posX),
 	_y(posY) {
-	this->_sourceRect.x = sourceX;
-	this->_sourceRect.y = sourceY;
-	this->_sourceRect.w = width;
-	this->_sourceRect.h = height;
+		this->_sourceRect.x = sourceX;
+		this->_sourceRect.y = sourceY;
+		this->_sourceRect.w = width;
+		this->_sourceRect.h = height;
 
-	this->_spriteSheet = SDL_CreateTextureFromSurface(graphics.getRenderer(), graphics.loadImage(filePath));
-	if (this->_spriteSheet == NULL) {
+		this->_spriteSheet = SDL_CreateTextureFromSurface(graphics.getRenderer(), graphics.loadImage(filePath));
+		if (this->_spriteSheet == NULL) {
 		OutputDebugString("Error: Cannot load image!!\n");
 	}
 }

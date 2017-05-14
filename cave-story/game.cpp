@@ -1,5 +1,4 @@
 #include <SDL.h>
-#include <algorithm>
 
 #include "game.h"
 #include "graphics.h"
@@ -55,8 +54,12 @@ void Game::gameLoop() {
 		const int CURRENT_TIME_MILLIS = SDL_GetTicks(); // Time at end of frame
 		int ELAPSED_MILLIS = CURRENT_TIME_MILLIS - LAST_UPDATE_TIME; // How long this frame took
 
-		this->update(std::min(ELAPSED_MILLIS, MAX_FRAME_TIME)); // Allows us to scale movement based on performance and framerate
 
 		LAST_UPDATE_TIME = CURRENT_TIME_MILLIS; // Time at start of new frame
 	}
+}
+
+
+void Game::update(float elapsedTime) {
+
 }
